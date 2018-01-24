@@ -2,9 +2,22 @@ import Mirage from 'ember-cli-mirage';
 import faker from 'faker';
 
 export default Mirage.Factory.extend({
-  firstName: faker.name.firstName();
-  lastName: faker.name.lastName();,
-  profilePicture: faker.image.avatar()
-  age: faker.random.number({min: 18, max: 70})
-  description: faker.lorem.paragraph()
+  firstName() {
+    return faker.name.firstName();
+  },
+  lastName() {
+    return faker.name.lastName();
+  },
+  profilePicture() {
+    return faker.image.avatar()
+  },
+  age() {
+    return faker.random.number({
+      min: 18,
+      max: 70
+    })
+  },
+  description() {
+    return faker.lorem.paragraph()
+  }
 });
