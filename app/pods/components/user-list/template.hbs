@@ -1,5 +1,7 @@
 <div style="width: 100%">
-{{#each users as |user|}}
-  {{user-template user=user}}
-{{/each}}
+  {{#each users as |user|}}
+    {{#link-to "users.show" user}}
+      {{user-template user=user}}'
+    {{/link-to}}
+  {{/each}}
 </div>
