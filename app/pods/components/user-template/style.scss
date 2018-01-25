@@ -1,3 +1,22 @@
-&{
-  color: red;
+& {
+  color: white;
+}
+
+.user-container {
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  max-height: 400px;
+  background-color: #849bb5;
+  border-radius: 10px;
+}
+
+.profile-picture {
+  border-style: solid;
+  border-radius: 50%;
+  margin-left: 84px;
+}
+
+.text-align-center {
+  text-align: center
 }
