@@ -30,4 +30,5 @@ export default function() {
   this.delete('/users/:id')
 
   this.get('/blogs')
+  this.get('/blogs/:id')
 }
