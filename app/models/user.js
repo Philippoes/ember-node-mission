@@ -5,5 +5,6 @@ export default DS.Model.extend({
   lastName: DS.attr('string'),
   profilePicture: DS.attr('string'),
   age: DS.attr('number'),
-  description: DS.attr('string')
+  description: DS.attr('string'),
+  blogs: DS.hasMany('blog')
 });
