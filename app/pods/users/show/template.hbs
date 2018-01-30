@@ -1,0 +1,5 @@
+{{user-template user=model}}
+<button style="width: 100px; height: 100px; border-radius:10px; background-color:red;font-size: large; color: white;" {{action "deleteUser"}}>Delete {{model.firstName}}</button>
+{{#each model.blogs as |blog|}}
+  {{#link-to "blogs.show" blog}}{{blog.title}}{{/link-to}}
+{{/each}}
