@@ -11,6 +11,9 @@ export default Mirage.Factory.extend({
   profilePicture() {
     return faker.image.avatar()
   },
+  title() {
+    return faker.name.jobTitle()
+  },
   age() {
     return faker.random.number({
       min: 18,
