@@ -12,5 +12,9 @@ export default DS.Model.extend({
   blogsCount: computed('blogs.[]', function() {
    let count = this.hasMany('blogs').ids().length;
    return count ? count : 0;
+ }),
+ dateJoined: DS.attr('string'),
+ displayDateJoined: computed('dateJoined', function() {
+   return `${this.get('dateJoined').slice(0, 10)}`
  })
 });

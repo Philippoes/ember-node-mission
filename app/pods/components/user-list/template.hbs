@@ -1,5 +1,5 @@
 {{#each users as |user|}}
   {{#link-to "users.show" user}}
-    {{user-template user=user click=(action "goToUser" user)}}
+    {{user-template user=user}}
   {{/link-to}}
 {{/each}}
