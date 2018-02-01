@@ -22,5 +22,8 @@ export default Mirage.Factory.extend({
   },
   description() {
     return faker.lorem.paragraph()
+  },
+  dateJoined() {
+    return faker.date.past()
   }
 });
