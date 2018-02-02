@@ -1,4 +1,15 @@
 import Ember from 'ember';
 
-export default Ember.Component.extend({
+const {
+   Component
+} = Ember;
+
+const ComponentClass = Component.extend({
+  classNameBindings: ['type']
 });
+
+ComponentClass.reopenClass({
+  positionalParams: ['user']
+});
+
+export default ComponentClass;

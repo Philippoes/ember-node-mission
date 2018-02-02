@@ -7,8 +7,7 @@ export default Controller.extend({
       comment.set('author', this.store.findRecord('user', 1));
       comment.set('blog', this.get('model'));
       comment.save().then(() => {
-        console.log("comment created")
-        self.send('refreshRoute');
+        this.get('model.comments').reload()
       }, () => {
         comment.deleteRecord();
       })

@@ -1,6 +1,6 @@
 {{blog-template blog=model}}
    <h2>Create Comment</h2>
-
+   
    {{#do-form comment submit=(action 'addComment') as |f|}}
      {{f.input-field 'text' controlType="textarea" label='Write here...'}}
      <button>Post comment</button>
