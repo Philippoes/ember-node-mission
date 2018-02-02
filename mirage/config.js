@@ -28,6 +28,7 @@ export default function() {
   this.get('/users')
   this.get('/users/:id');
   this.delete('/users/:id')
+  this.post('/comments');
 
   this.get('/blogs')
   this.get('/blogs/:id')

@@ -16,5 +16,6 @@ export default DS.Model.extend({
  dateJoined: DS.attr('string'),
  displayDateJoined: computed('dateJoined', function() {
    return `${this.get('dateJoined').slice(0, 10)}`
- })
+ }),
+ comments: DS.hasMany('comment')
 });

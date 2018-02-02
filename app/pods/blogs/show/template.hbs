@@ -1,9 +1,7 @@
 {{blog-template blog=model}}
-<form {{action "addComment" on="submit"}}>
    <h2>Create Comment</h2>
 
-   {{textarea label="Comment" value=comment type="text"}}
-
-   <button class="btn btn-primary btn-block" type="submit">Submit</button>
-
- </form>
+   {{#do-form comment submit=(action 'addComment') as |f|}}
+     {{f.input-field 'text' controlType="textarea" label='Write here...'}}
+     <button>Post comment</button>
+   {{/do-form}}
