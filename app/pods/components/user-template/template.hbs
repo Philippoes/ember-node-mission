@@ -1,4 +1,4 @@
 {{#component-tools as |i|}}
-  {{i.avatar user.profilePicture}}
-  {{i.details user}}
+  {{i.avatar user.profilePicture click=(action (optional onUserCardClick))}}
+  {{i.details user click=(action (optional onUserCardClick))}}
 {{/component-tools}}
