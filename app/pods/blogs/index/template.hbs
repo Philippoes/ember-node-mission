@@ -1,5 +1,5 @@
 {{#each model as |blog|}}
-  {{#link-to "blogs.show" blog}}
+  <div {{action "goToBlog" blog.id}}>
     {{blog-template blog=blog}}
-  {{/link-to}}
+  </div>
 {{/each}}
