@@ -2,12 +2,10 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   actions: {
-    addComment(author_id) {
+    addComment() {
       let comment = this.store.createRecord('comment', this.get('comment'));
-      comment.set('author', this.store.findRecord('user', 1));
-      comment.set('blog', this.get('model'));
+      comment.set('blog', this.get('model.blog'));
       comment.save().then(() => {
-        this.get('model.comments').reload()
       }, () => {
         comment.deleteRecord();
       })

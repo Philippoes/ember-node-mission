@@ -1,7 +1,18 @@
-{{blog-template blog=model}}
-   <h2>Create Comment</h2>
-   
-   {{#do-form comment submit=(action 'addComment') as |f|}}
-     {{f.input-field 'text' controlType="textarea" label='Write here...'}}
-     <button>Post comment</button>
-   {{/do-form}}
+{{blog-template blog=model.blog}}
+<h2>Create Comment</h2>
+
+{{#do-form comment submit=(action 'addComment') as |f|}}
+
+  {{#f.do-field "author" as |field|}}
+    {{field.do-label "Author: "}} {{field.do-control "select" options=model.authors optionLabelPath="fullName"}}
+  {{/f.do-field}}
+
+  {{f.input-field 'text' controlType="textarea" label='Write here...'}}
+  <button>Post comment</button>
+{{/do-form}}
+
+
+
+{{#each model.blog.comments as |comment|}}
+  <p>{{comment.author.fullName}}: {{comment.text}}</p>
+{{/each}}
