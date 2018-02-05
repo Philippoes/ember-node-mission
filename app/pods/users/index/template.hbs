@@ -1,3 +1,5 @@
-{{#each model as |user|}}
+<div class="flex">
+  {{#each model as |user|}}
     {{user-template user=user onUserCardClick=(action "goToUser" user.id)}}
-{{/each}}
+  {{/each}}
+</div>
